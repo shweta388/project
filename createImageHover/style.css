@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #222;
+}
+
+.container .clip{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.container .clip.clip1{
+    background:url('https://images.unsplash.com/photo-1512203492609-972c16baa28b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80');
+    background-size: cover;
+    clip-path: polygon(0 0,55% 0,20% 100%,0% 100%);
+}
+
+.container .clip.clip2{
+    background:url('https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1468&q=80');
+    background-size: cover;
+    clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%);       
+}
+
+.container .clip.clip3{
+    background: url('https://images.unsplash.com/photo-1525025486157-6b19617002b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80');
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);       
+}
+
+.container:hover .clip{
+    clip-path: polygon(100% 0,100% 0, 100% 100%,100% 100%);
+}
+
+.container .clip:hover{
+    clip-path: polygon(0 0,100% 0, 100% 100%,0% 100%);
+}
+
+.container .clip h2{
+    margin:30px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.container .clip1 p{
+    margin: 0px 30px;
+    display: flex;
+    justify-content: flex-end;
+    width: 200px;
+    color: #ddd;
+}
+
+.container .clip2 p{
+    margin: -10px 30px;
+    position: absolute;
+    right: 0;
+    width: 200px;
+}
+
+.container .clip3 p{
+    margin: 10px 30px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    text-align: center;
+}
